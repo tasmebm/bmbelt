@@ -1,28 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- صفحه اصلی -->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bmbelt.ir/</loc>
-    <lastmod>2025-08-14</lastmod>
+    <loc>https://bmbelt.ir/index.html</loc>
+    <lastmod>2025-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- صفحه محصولات -->
   <url>
     <loc>https://bmbelt.ir/products.html</loc>
-    <lastmod>2025-08-14</lastmod>
+    <lastmod>2025-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
-  <!-- صفحه تماس با ما -->
   <url>
     <loc>https://bmbelt.ir/contact.html</loc>
-    <lastmod>2025-08-14</lastmod>
+    <lastmod>2025-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
 </urlset>
