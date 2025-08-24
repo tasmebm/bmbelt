@@ -1,4 +1,41 @@
+# robots.txt for BMBelt.ir
+# نسخه بهینه برای موتورهای جستجو
+
+# اجازه به همه ربات‌ها برای ایندکس صفحات عمومی
 User-agent: *
 Disallow: /admin/
 Disallow: /private/
+Disallow: /cgi-bin/
+Allow: /
+
+# بلاک ربات‌های خاص که Cloudflare مدیریت می‌کند
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+# نقشه سایت برای دسترسی سریع ربات‌ها
 Sitemap: https://bmbelt.ir/sitemap.xml
+
+# یادداشت:
+# مسیرهای /admin/ و /private/ محرمانه هستند و نباید ایندکس شوند
+# سایر مسیرها آزاد هستند و گوگل و سایر موتورهای جستجو می‌توانند ایندکس کنند
