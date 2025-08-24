@@ -1,8 +1,4 @@
 User-agent: *
 Disallow: /admin/
-Disallow: /cgi-bin/
 Disallow: /private/
-Allow: /
-
-# نقشه سایت
 Sitemap: https://bmbelt.ir/sitemap.xml
