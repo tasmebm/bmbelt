@@ -1,7 +1,7 @@
-# robots.txt پیشرفته برای bmbelt.ir
+# robots.txt پیشرفته و بهینه برای bmbelt.ir
 # مسیرهای مدیریتی و خصوصی مسدود، صفحات اصلی و محصولات باز
 
-# بخش Cloudflare Managed Content
+# بخش Cloudflare Managed Content (ربات‌های خاص مسدود)
 User-agent: Amazonbot
 Disallow: /
 
@@ -29,14 +29,15 @@ Disallow: /
 # قوانین عمومی برای همه ربات‌ها
 User-agent: *
 
-# مسدود کردن مسیرهای حساس
+# جلوگیری از کراول مسیرهای حساس
 Disallow: /admin/
 Disallow: /private/
 Disallow: /config/
 Disallow: /cgi-bin/
 Disallow: /temp/
+Disallow: /*?*             # جلوگیری از کراول URLهای با پارامتر (Query Strings) برای جلوگیری از Duplicate Content
 
-# اجازه ایندکس صفحات اصلی و محصولات
+# اجازه ایندکس صفحات اصلی و منابع ضروری
 Allow: /
 Allow: /index.html
 Allow: /products.html
@@ -45,5 +46,8 @@ Allow: /images/
 Allow: /css/
 Allow: /js/
 
-# نقشه سایت
+# تنظیم Crawl-delay برای کاهش فشار روی سرور
+Crawl-delay: 5
+
+# مسیر نقشه سایت
 Sitemap: https://bmbelt.ir/sitemap.xml
