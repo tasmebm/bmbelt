@@ -1,51 +1,18 @@
-# robots.txt پیشرفته و استاندارد برای bmbelt.ir
-# مسیرهای مدیریتی و خصوصی مسدود، صفحات اصلی و محصولات باز
+# robots.txt for https://bmbelt.ir/
+# اجازه به همه ربات‌ها برای دسترسی به صفحات عمومی
+# مسدود کردن مسیرهای حساس
 
-# ربات‌های خاص مسدود
-User-agent: Amazonbot
-Disallow: /
-
-User-agent: Applebot-Extended
-Disallow: /
-
-User-agent: Bytespider
-Disallow: /
-
-User-agent: CCBot
-Disallow: /
-
-User-agent: ClaudeBot
-Disallow: /
-
-User-agent: Google-Extended
-Disallow: /
-
-User-agent: GPTBot
-Disallow: /
-
-User-agent: meta-externalagent
-Disallow: /
-
-# قوانین عمومی برای همه ربات‌ها
 User-agent: *
-Allow: /                 # اجازه دسترسی به کل سایت
-Allow: /index.html
-Allow: /products.html
-Allow: /contact.html
-Allow: /images/
-Allow: /css/
-Allow: /js/
-
-# جلوگیری از کراول مسیرهای حساس
+# مسیرهای مدیریت و خصوصی
 Disallow: /admin/
-Disallow: /private/
 Disallow: /config/
+Disallow: /private/
+Disallow: /tmp/
 Disallow: /cgi-bin/
-Disallow: /temp/
-Disallow: /*?*            # جلوگیری از کراول URLهای با پارامتر (Query Strings) برای جلوگیری از Duplicate Content
-
-# تنظیم Crawl-delay برای کاهش فشار روی سرور
-Crawl-delay: 5
+Disallow: /checkout/
+Disallow: /login/
+Disallow: /register/
+Disallow: /*?sessionid=
 
 # مسیر نقشه سایت
 Sitemap: https://bmbelt.ir/sitemap.xml
