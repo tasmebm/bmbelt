@@ -1,6 +1,6 @@
 # robots.txt for https://bmbelt.ir/
 # اجازه به همه ربات‌ها برای دسترسی به صفحات عمومی
-# مسدود کردن مسیرهای حساس
+# مسدود کردن مسیرهای حساس، فایل‌های غیرضروری و پارامترهای URL
 
 User-agent: *
 # مسیرهای مدیریت و خصوصی
@@ -12,7 +12,24 @@ Disallow: /cgi-bin/
 Disallow: /checkout/
 Disallow: /login/
 Disallow: /register/
-Disallow: /*?sessionid=
 
-# مسیر نقشه سایت
+# مسدود کردن پارامترهای نشست
+Disallow: /*?sessionid=
+Disallow: /*?utm_source=
+Disallow: /*?utm_medium=
+Disallow: /*?utm_campaign=
+
+# مسدود کردن فایل‌های غیر ضروری برای ربات‌ها
+Disallow: /images/large/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendor/
+
+# صفحات اصلی باز هستند
+Allow: /index.html
+Allow: /products.html
+Allow: /contact.html
+
+# مسیر نقشه سایت برای ایندکس بهتر
 Sitemap: https://bmbelt.ir/sitemap.xml
