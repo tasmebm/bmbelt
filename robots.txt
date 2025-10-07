@@ -1,5 +1,5 @@
-# robots.txt for https://bmbelt.ir/
-# اجازه به همه ربات‌ها (از جمله موتورهای جستجو و ربات‌های هوش مصنوعی)
+# robots.txt برای سایت https://bmbelt.ir/
+# اجازه به همه ربات‌ها برای دسترسی به صفحات عمومی
 # جلوگیری از دسترسی به مسیرهای خصوصی و مدیریتی
 
 User-agent: *
@@ -12,8 +12,6 @@ Disallow: /checkout/
 Disallow: /login/
 Disallow: /register/
 Disallow: /*?sessionid=
-
-# اجازه برای بقیه صفحات سایت
 Allow: /
 
 # مسیر نقشه سایت
