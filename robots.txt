@@ -1,9 +1,8 @@
-# robots.txt بهینه و استاندارد برای سایت bmbelt.ir
-# اجازه بازدید ربات‌های AI معتبر از صفحات عمومی
-# جلوگیری از دسترسی به مسیرهای خصوصی و مدیریتی
+# robots.txt استاندارد برای سایت bmbelt.ir
+# مسیرهای خصوصی و مدیریتی مسدود
+# ربات‌های AI معتبر اجازه بازدید صفحات عمومی دارند
 
-# --- سیگنال‌های محتوا (Cloudflare Managed Content Signals) ---
-# این خطوط توسط Cloudflare برای ربات‌های AI استفاده می‌شوند و توسط سایر ربات‌ها نادیده گرفته می‌شوند
+# --- Cloudflare Managed Content Signals ---
 # search=yes
 # ai-train=no
 # END Cloudflare Managed Content Signals
