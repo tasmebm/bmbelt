@@ -1,13 +1,14 @@
-# robots.txt استاندارد برای سایت bmbelt.ir
+# robots.txt استاندارد و کامل برای سایت bmbelt.ir
 # مسیرهای خصوصی و مدیریتی مسدود
-# ربات‌های AI معتبر اجازه بازدید صفحات عمومی دارند
+# ربات‌های AI معتبر شناخته‌شده Cloudflare اجازه بازدید صفحات عمومی دارند
 
 # --- Cloudflare Managed Content Signals ---
 # search=yes
 # ai-train=no
+# ai-input=yes
 # END Cloudflare Managed Content Signals
 
-# ربات‌های هوش مصنوعی معتبر
+# ربات‌های هوش مصنوعی معتبر Cloudflare
 User-agent: GPTBot
 Allow: /
 
@@ -15,6 +16,15 @@ User-agent: ClaudeBot
 Allow: /
 
 User-agent: Google-Extended
+Allow: /
+
+User-agent: AnthropicAI
+Allow: /
+
+User-agent: Perplexity
+Allow: /
+
+User-agent: TikTokSpider
 Allow: /
 
 # سایر ربات‌ها
