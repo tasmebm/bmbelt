@@ -1,6 +1,6 @@
 # robots.txt استاندارد و کامل برای سایت bmbelt.ir
 # مسیرهای خصوصی و مدیریتی مسدود
-# ربات‌های AI معتبر شناخته‌شده Cloudflare اجازه بازدید صفحات عمومی دارند
+# ربات‌های AI معتبر Cloudflare اجازه بازدید صفحات عمومی دارند
 
 # --- Cloudflare Managed Content Signals ---
 # search=yes
@@ -38,7 +38,8 @@ Disallow: /checkout/
 Disallow: /login/
 Disallow: /register/
 Disallow: /*?sessionid=
+Disallow: /sitemap.xml
 Allow: /
 
-# مسیر نقشه سایت
+# مسیر نقشه سایت برای گوگل
 Sitemap: https://bmbelt.ir/sitemap.xml
