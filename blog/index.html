@@ -4,142 +4,384 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>راهنمای انتخاب تسمه صنعتی؛ تایمینگ، V و نقاله | بزرگمهر</title>
-
-  <link rel="canonical" href="https://bmbelt.ir/blog/post1.html">
-
-  <meta name="description" content="راهنمای انتخاب تسمه صنعتی، بررسی تفاوت تسمه تایمینگ، تسمه V و تسمه نقاله، نکات نصب، نگهداری و عوامل مؤثر بر عمر تسمه.">
+  <title>مقالات آموزشی تسمه صنعتی و راهنمای خرید | بزرگمهر</title>
+  <meta name="description" content="راهنمای خرید و انتخاب تسمه صنعتی، تسمه تایمینگ، تسمه شیاری و تسمه نقاله؛ نکات نصب، نگهداری و افزایش عمر تسمه‌ها از فروشگاه بزرگمهر.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bmbelt.ir/blog/">
 
   <link rel="icon" href="/images/logo.webp" type="image/webp">
   <link rel="stylesheet" href="/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    .blog-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .blog-section h1 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    .blog-intro {
+      text-align: center;
+      color: #555;
+      margin-bottom: 30px;
+      line-height: 2;
+    }
+
+    .blog-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap: 20px;
+    }
+
+    .blog-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+      padding: 20px;
+      transition: transform .2s ease, box-shadow .2s ease;
+      min-width: 0;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+    }
+
+    .blog-card h2 {
+      margin: 0 0 12px;
+      font-size: 1.15rem;
+      line-height: 1.9;
+    }
+
+    .blog-card h2 a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .blog-card h2 a:hover {
+      text-decoration: underline;
+    }
+
+    .blog-card time {
+      display: block;
+      font-size: .85rem;
+      color: #666;
+      margin-bottom: 12px;
+    }
+
+    .blog-card p {
+      color: #555;
+      line-height: 1.9;
+      font-size: .95rem;
+      margin: 0;
+    }
+
+    .blog-card .read-more {
+      display: inline-block;
+      margin-top: 15px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .blog-contact {
+      max-width: 1000px;
+      margin: 35px auto;
+      padding: 25px 20px;
+      text-align: center;
+      line-height: 2;
+    }
+
+    .blog-contact h2 {
+      margin-bottom: 12px;
+    }
+
+    .blog-contact a {
+      overflow-wrap: anywhere;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 15px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .blog-card {
+        transition: none;
+      }
+
+      .blog-card:hover {
+        transform: none;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <header>
     <div class="logo">
-      <a href="/" aria-label="صفحه اصلی تسمه بزرگمهر">
-        <img src="/images/logo.webp"
-             alt="لوگوی تسمه صنعتی بزرگمهر"
-             width="100"
-             height="100">
+      <a href="/" aria-label="صفحه اصلی تسمه صنعتی بزرگمهر">
+        <img
+          src="/images/logo.webp"
+          alt="لوگوی تسمه صنعتی بزرگمهر"
+          width="100"
+          height="100"
+        >
       </a>
     </div>
 
-    <button class="menu-btn"
-            type="button"
-            aria-label="باز کردن منو"
-            aria-controls="nav"
-            aria-expanded="false"
-            onclick="toggleMenu()">
-      ☰
-    </button>
+    <button
+      class="menu-btn"
+      type="button"
+      onclick="toggleMenu()"
+      aria-label="باز کردن منو"
+      aria-controls="nav"
+      title="باز کردن منو"
+    >☰</button>
   </header>
 
-  <nav id="nav">
+  <nav id="nav" aria-label="منوی اصلی">
     <a href="/">خانه</a>
     <a href="/products/">محصولات</a>
     <a href="/contact.html">تماس با ما</a>
-    <a href="/blog/" class="active">وبلاگ</a>
+    <a href="/blog/" class="active" aria-current="page">وبلاگ</a>
   </nav>
 
   <main class="section blog-section">
-    <article>
-      <h1>راهنمای انتخاب تسمه صنعتی؛ تفاوت تسمه تایمینگ، V و نقاله</h1>
+    <h1>وبلاگ تخصصی تسمه صنعتی بزرگمهر</h1>
 
-      <time datetime="2025-10-01">۱ مهر ۱۴۰۴</time>
+    <p class="blog-intro">
+      در این بخش، راهنمای انتخاب و خرید تسمه صنعتی، نکات نصب و نگهداری،
+      شناخت انواع تسمه تایمینگ، تسمه شیاری و تسمه نقاله را مطالعه کنید.
+      برای انتخاب تسمه متناسب با دستگاه خود می‌توانید از صفحات محصولات
+      و راه‌های ارتباطی فروشگاه بزرگمهر نیز استفاده کنید.
+    </p>
 
-      <p>
-        انتخاب تسمه مناسب به نوع دستگاه، شرایط کاری، ابعاد موردنیاز
-        و میزان بار واردشده بستگی دارد. انتخاب درست می‌تواند به کاهش
-        استهلاک، جلوگیری از توقف دستگاه و بهبود عملکرد سیستم کمک کند.
-      </p>
+    <div class="blog-cards">
 
-      <h2>۱. تسمه تایمینگ چیست و چه کاربردی دارد؟</h2>
+      <article class="blog-card">
+        <h2>
+          <a href="/blog/post1.html">
+            راهنمای انتخاب تسمه تایمینگ، شیاری و نقاله برای ماشین‌آلات صنعتی
+          </a>
+        </h2>
+        <time datetime="2025-10-01">۱ مهر ۱۴۰۴</time>
+        <p>
+          با انواع تسمه صنعتی، کاربردهای آن‌ها و نکات مهم انتخاب تسمه مناسب
+          برای ماشین‌آلات و خطوط تولید آشنا شوید.
+        </p>
+        <a class="read-more" href="/blog/post1.html">مطالعه مقاله</a>
+      </article>
 
-      <p>
-        تسمه تایمینگ دارای دندانه‌هایی است که با پروفیل پولی هماهنگ
-        می‌شوند و برای انتقال حرکت با نسبت مشخص و کاهش لغزش طراحی
-        شده‌اند. این تسمه‌ها در برخی ماشین‌آلات بسته‌بندی، تجهیزات
-        صنعتی و سامانه‌های حرکتی دقیق استفاده می‌شوند.
-      </p>
+      <article class="blog-card">
+        <h2>
+          <a href="/blog/post2.html">
+            نکات کاربردی برای افزایش عمر تسمه نقاله و تایمینگ صنعتی
+          </a>
+        </h2>
+        <time datetime="2024-09-15">۱۵ شهریور ۱۴۰۳</time>
+        <p>
+          نکاتی درباره نگهداری، تنظیم کشش و بررسی وضعیت تسمه‌ها برای
+          کاهش استهلاک و جلوگیری از توقف ناخواسته دستگاه.
+        </p>
+        <a class="read-more" href="/blog/post2.html">مطالعه مقاله</a>
+      </article>
 
-      <p>
-        هنگام انتخاب تسمه تایمینگ، به پروفیل دندانه، گام، عرض،
-        طول تسمه، جنس و سازگاری آن با پولی توجه کنید.
-        اندازه‌گیری نادرست می‌تواند باعث عملکرد نامناسب یا خرابی زودهنگام شود.
-      </p>
+      <article class="blog-card">
+        <h2>
+          <a href="/blog/post3.html">
+            راهنمای خرید تسمه صنعتی اصل و روش‌های بررسی اصالت کالا
+          </a>
+        </h2>
+        <time datetime="2024-11-15">۲۵ آبان ۱۴۰۳</time>
+        <p>
+          هنگام خرید تسمه صنعتی به برند، مشخصات فنی، کد محصول و اعتبار
+          فروشنده توجه کنید تا انتخاب مناسب‌تری داشته باشید.
+        </p>
+        <a class="read-more" href="/blog/post3.html">مطالعه مقاله</a>
+      </article>
 
-      <h2>۲. تفاوت تسمه V و تسمه شیاری Poly-V</h2>
+      <article class="blog-card">
+        <h2>
+          <a href="/blog/post4.html">
+            نشانه‌های خرابی تسمه پروانه و زمان بررسی یا تعویض آن
+          </a>
+        </h2>
+        <time datetime="2024-11-10">۲۰ آبان ۱۴۰۳</time>
+        <p>
+          صدای غیرعادی، ترک‌خوردگی، سایش و لغزش می‌توانند از نشانه‌های
+          نیاز به بررسی تسمه و سیستم انتقال قدرت باشند.
+        </p>
+        <a class="read-more" href="/blog/post4.html">مطالعه مقاله</a>
+      </article>
 
-      <p>
-        تسمه V کلاسیک دارای مقطع ذوزنقه‌ای است و در شیار پولی قرار
-        می‌گیرد. این نوع تسمه در بسیاری از سیستم‌های انتقال قدرت،
-        پمپ‌ها و ماشین‌آلات صنعتی کاربرد دارد.
-      </p>
+      <article class="blog-card">
+        <h2>
+          <a href="/blog/post5.html">
+            تفاوت تسمه نقاله PVC و PU و کاربردهای آن‌ها
+          </a>
+        </h2>
+        <time datetime="2024-10-20">۲۹ مهر ۱۴۰۳</time>
+        <p>
+          با درنظرگرفتن شرایط محیطی، نوع محصول، بهداشت و نحوه نظافت،
+          جنس مناسب تسمه نقاله را برای خط تولید خود انتخاب کنید.
+        </p>
+        <a class="read-more" href="/blog/post5.html">مطالعه مقاله</a>
+      </article>
 
-      <p>
-        تسمه شیاری Poly-V دارای چند شیار طولی در سطح داخلی است.
-        این ساختار با تسمه V کلاسیک تفاوت دارد و انتخاب آن باید
-        بر اساس پروفیل، طول و طراحی پولی انجام شود.
-      </p>
+      <article class="blog-card">
+        <h2>
+          <a href="/blog/post6.html">
+            راهنمای اندازه‌گیری تسمه تایمینگ برای دستگاه‌های صنعتی
+          </a>
+        </h2>
+        <time datetime="2024-10-10">۱۹ مهر ۱۴۰۳</time>
+        <p>
+          برای انتخاب تسمه تایمینگ، گام دندانه، تعداد دندانه، عرض تسمه
+          و مشخصات فنی موردنیاز دستگاه را بررسی کنید.
+        </p>
+        <a class="read-more" href="/blog/post6.html">مطالعه مقاله</a>
+      </article>
 
-      <p>
-        برای انتخاب صحیح، فقط به ظاهر تسمه اکتفا نکنید؛ کد درج‌شده
-        روی تسمه قبلی، اندازه‌ها و مشخصات دستگاه را نیز بررسی کنید.
-      </p>
+      <article class="blog-card">
+        <h2>
+          <a href="/blog/post7.html">
+            اهمیت هم‌راستایی پولی‌ها در افزایش عمر تسمه صنعتی
+          </a>
+        </h2>
+        <time datetime="2024-09-25">۴ مهر ۱۴۰۳</time>
+        <p>
+          هم‌راستا نبودن پولی‌ها می‌تواند موجب سایش نامتقارن، لغزش
+          و کاهش عمر تسمه شود.
+        </p>
+        <a class="read-more" href="/blog/post7.html">مطالعه مقاله</a>
+      </article>
 
-      <h2>۳. تسمه نقاله و نکات انتخاب آن</h2>
+      <article class="blog-card">
+        <h2>
+          <a href="/blog/post8.html">
+            آشنایی با برندهای تسمه صنعتی و نکات خرید مطمئن
+          </a>
+        </h2>
+        <time datetime="2024-09-05">۱۵ شهریور ۱۴۰۳</time>
+        <p>
+          هنگام مقایسه برندهای تسمه صنعتی، مشخصات فنی، اصالت کالا،
+          شرایط کاربرد و اعتبار فروشنده را در نظر بگیرید.
+        </p>
+        <a class="read-more" href="/blog/post8.html">مطالعه مقاله</a>
+      </article>
 
-      <p>
-        تسمه نقاله برای جابه‌جایی مواد و محصولات در خطوط انتقال
-        استفاده می‌شود. جنس تسمه، عرض، ضخامت، نوع سطح و شرایط محیطی
-        باید با کاربرد موردنظر هماهنگ باشند.
-      </p>
+      <article class="blog-card">
+        <h2>
+          <a href="/blog/post9.html">
+            چگونه کشش مناسب تسمه صنعتی را تنظیم کنیم؟
+          </a>
+        </h2>
+        <time datetime="2024-08-20">۳۰ مرداد ۱۴۰۳</time>
+        <p>
+          کشش نامناسب تسمه ممکن است باعث لغزش، افزایش دما، استهلاک
+          زودرس و فشار اضافی بر اجزای سیستم انتقال قدرت شود.
+        </p>
+        <a class="read-more" href="/blog/post9.html">مطالعه مقاله</a>
+      </article>
 
-      <p>
-        عواملی مانند وزن بار، دمای محیط، میزان سایش، تماس احتمالی
-        با روغن یا مواد شیمیایی و سرعت خط انتقال در انتخاب تسمه
-        مؤثر هستند. پیش از سفارش، مشخصات دستگاه و شرایط کاری را
-        با فروشنده یا کارشناس فنی بررسی کنید.
-      </p>
+      <article class="blog-card">
+        <h2>
+          <a href="/blog/post10.html">
+            نکات نگهداری و نظافت تسمه نقاله در صنایع غذایی و بسته‌بندی
+          </a>
+        </h2>
+        <time datetime="2024-08-05">۱۵ مرداد ۱۴۰۳</time>
+        <p>
+          در انتخاب تسمه نقاله برای صنایع غذایی، سازگاری با محصول،
+          شرایط نظافت و الزامات بهداشتی خط تولید اهمیت دارد.
+        </p>
+        <a class="read-more" href="/blog/post10.html">مطالعه مقاله</a>
+      </article>
 
-      <h2>۴. نکات مهم نصب و نگهداری تسمه</h2>
+    </div>
 
-      <ul>
-        <li>پیش از نصب، ابعاد و مشخصات تسمه را با دستگاه تطبیق دهید.</li>
-        <li>هم‌راستایی پولی‌ها و وضعیت شیارها را بررسی کنید.</li>
-        <li>کشش تسمه را مطابق توصیه سازنده تنظیم کنید.</li>
-        <li>از تماس تسمه با مواد ناسازگار با جنس آن جلوگیری کنید.</li>
-        <li>وضعیت سایش، ترک، تغییر شکل و صدای غیرعادی را بررسی کنید.</li>
-      </ul>
-
-      <h2>۵. برای انتخاب تسمه مناسب چه اطلاعاتی لازم است؟</h2>
-
-      <p>
-        برای انتخاب دقیق‌تر، نوع دستگاه، کاربرد تسمه، کد تسمه قبلی،
-        طول، عرض یا پروفیل و شرایط محیطی را مشخص کنید.
-        اگر کد تسمه را ندارید، عکس واضح از تسمه و پولی و اندازه‌های
-        موجود می‌تواند به بررسی گزینه‌های سازگار کمک کند.
-      </p>
-
-      <p>
-        <a href="/products/">مشاهده دسته‌بندی تسمه‌های صنعتی</a>
-      </p>
-
-      <p>
-        برای پرسش درباره موجودی و قیمت، با
-        <a href="/contact.html">فروشگاه تسمه بزرگمهر تماس بگیرید</a>.
-      </p>
-    </article>
-
-    <p><a href="/blog/">بازگشت به وبلاگ</a></p>
+    <p style="text-align:center; margin-top:30px; line-height:2;">
+      برای مشاهده محصولات، به
+      <a href="/products/">صفحه محصولات تسمه صنعتی</a>
+      مراجعه کنید یا برای دریافت راهنمایی با فروشگاه تماس بگیرید.
+    </p>
   </main>
+
+  <section class="section blog-contact" aria-labelledby="blog-contact-title">
+    <h2 id="blog-contact-title">مشاوره و سفارش تسمه صنعتی</h2>
+    <p>
+      برای استعلام موجودی، دریافت راهنمایی و سفارش انواع تسمه صنعتی
+      با فروشگاه تسمه صنعتی بزرگمهر تماس بگیرید.
+    </p>
+
+    <p>
+      <strong>تلفن:</strong>
+      <a href="tel:+982133929881">۰۲۱-۳۳۹۲۹۸۸۱</a>
+      |
+      <a href="tel:+982136871848">۰۲۱-۳۶۸۷۱۸۴۸</a>
+    </p>
+
+    <div class="contact-links">
+      <a
+        href="https://wa.me/989122714934"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        ارتباط در واتساپ
+      </a>
+
+      <a
+        href="https://instagram.com/tasmebozorgmehr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        صفحه اینستاگرام
+      </a>
+    </div>
+  </section>
 
   <footer>
     <p>تمامی حقوق متعلق به تسمه صنعتی بزرگمهر می‌باشد.</p>
   </footer>
 
+  <div class="fab">
+    <div class="fab-icons" id="fabIcons">
+      <a href="tel:+982133929881" aria-label="تماس تلفنی">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+      </a>
+
+      <a
+        href="https://wa.me/989122714934"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="تماس از طریق واتساپ"
+      >
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <button
+      class="fab-button"
+      type="button"
+      onclick="toggleFab()"
+      aria-label="نمایش راه‌های تماس"
+      aria-controls="fabIcons"
+    >+</button>
+  </div>
+
   <script src="/script.js" defer></script>
 </body>
-        </html>
+      </html>
