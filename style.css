@@ -38,7 +38,7 @@ footer{background:#003366;color:#fff;padding:10px 15px;font-size:14px;line-heigh
 .product-card{max-width:48%}
 }
 @media(max-width:600px){
-body{font-size:18px}
+body{font-size:20px}
 .products{flex-direction:column}
 .product-card{max-width:100%}
 nav a{font-size:15px;padding:14px 6px}
