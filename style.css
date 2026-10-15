@@ -3,4 +3,4 @@
 .contact-info a.contact-social i{font-size:40px!important;line-height:1}
 .contact-info a.contact-social.whatsapp i{color:#25d366!important}
 .contact-info a.contact-social.instagram i{color:#e1306c!important}
-
+.contact-info li:has(.contact-social){display:inline-block}
