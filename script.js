@@ -1,20 +1,2 @@
-function toggleMenu() {
-const nav = document.getElementById("nav");
-if (nav) {
-nav.classList.toggle("open");
-}
-}
 
-document.addEventListener("click", function(event) {
-const nav = document.getElementById("nav");
-const menuButton = document.querySelector(".menu-btn");
-
-if (
-nav &&
-menuButton &&
-!nav.contains(event.target) &&
-!menuButton.contains(event.target)
-) {
-nav.classList.remove("open");
-}
-});
+function toggleMenu(){const e=document.getElementById("nav");e&&e.classList.toggle("open")}function toggleFab(){const e=document.getElementById("fabIcons"),t=document.querySelector(".fab-button");if(!e||!t)return;const n=e.classList.contains("show");e.classList.toggle("show"),t.textContent=n?"+":"×"}document.addEventListener("click",e=>{const t=document.getElementById("nav"),n=document.querySelector(".menu-btn");t&&n&&!t.contains(e.target)&&!n.contains(e.target)&&t.classList.remove("open")})
