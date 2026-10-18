@@ -1,0 +1,11 @@
+title: "تسمه صنعتی بزرگمهر"
+url: "https://tasmebm.github.io"
+baseurl: "/bmbelt_test"
+lang: fa
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
