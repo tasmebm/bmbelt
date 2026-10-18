@@ -1,0 +1,22 @@
+<header>
+  <div class="logo">
+    <a href="{{ '/' | relative_url }}" aria-label="صفحه اصلی تسمه صنعتی بزرگمهر">
+      <img src="{{ '/images/logo.webp' | relative_url }}"
+           alt="لوگوی تسمه صنعتی بزرگمهر"
+           width="100" height="100">
+    </a>
+  </div>
+
+  <button class="menu-btn" type="button"
+          onclick="toggleMenu()"
+          aria-label="باز کردن منو"
+          aria-controls="nav"
+          aria-expanded="false">☰</button>
+</header>
+
+<nav id="nav">
+  <a href="{{ '/' | relative_url }}">صفحه اصلی</a>
+  <a href="{{ '/products/' | relative_url }}">محصولات</a>
+  <a href="{{ '/blog/' | relative_url }}">مقالات</a>
+  <a href="{{ '/contact/' | relative_url }}">تماس با ما</a>
+</nav>
