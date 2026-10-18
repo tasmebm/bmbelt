@@ -1,4 +1,3 @@
-
 function toggleMenu() {
   const nav = document.getElementById('nav');
   const button = document.querySelector('.menu-btn');
