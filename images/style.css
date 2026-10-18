@@ -1,0 +1,389 @@
+@font-face {
+  font-family: Vazirmatn;
+  src: url('/fonts/Vazirmatn[wght].woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #222;
+  text-align: center;
+  line-height: 1.7;
+  font-size: 16px;
+  font-family: Vazirmatn, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, span, div, button {
+  font-family: Vazirmatn, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #003366;
+  padding: 10px 20px;
+  color: #fff;
+  position: relative;
+  z-index: 1001;
+}
+
+.logo img {
+  display: block;
+  height: 50px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.menu-btn {
+  font-size: 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  background: #003366;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  z-index: 1000;
+  transition: max-height .25s ease;
+}
+
+nav.open {
+  max-height: 480px;
+}
+
+nav a {
+  padding: 14px 8px;
+  text-decoration: none;
+  color: #fff;
+  border-top: 1px solid rgba(255,255,255,.2);
+  font-size: 15px;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: #002244;
+}
+
+.section {
+  padding: 16px;
+  max-width: 1100px;
+  margin: 0 auto 30px;
+}
+
+.section h1,
+.section h2 {
+  color: #003366;
+  margin-bottom: 12px;
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 300px;
+  margin: 0 auto 20px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+  padding: 18px;
+  width: 100%;
+  max-width: 48%;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.products .product-card h3 a {
+  text-decoration: none;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.image-row img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+iframe {
+  border: 0;
+  width: 100%;
+  height: 250px;
+  margin-top: 15px;
+}
+
+footer {
+  background: #003366;
+  color: #fff;
+  padding: 24px 16px;
+  font-size: 14px;
+  line-height: 1.8;
+  text-align: center;
+  margin-top: 30px;
+}
+
+footer a {
+  color: #fff;
+}
+
+.floating-contact {
+  position: fixed;
+  z-index: 2000;
+  left: 16px;
+  bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.floating-contact a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 23px;
+  box-shadow: 0 3px 10px rgba(0,0,0,.25);
+}
+
+.floating-contact a svg {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.faq-question .icon {
+  flex: 0 0 auto;
+  transition: transform .2s ease;
+}
+
+.faq-item.active .faq-question .icon {
+  transform: rotate(180deg);
+}
+
+.float-whatsapp {
+  background: #25d366;
+}
+
+.float-phone {
+  background: #0757a6;
+}
+
+.float-instagram {
+  background: #c13584;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #ffbf47;
+  outline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  nav {
+    position: static;
+    max-height: none;
+    width: auto;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav a {
+    border: 0;
+    padding: 12px 20px;
+  }
+
+  header {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-image {
+    height: 220px;
+  }
+
+  .product-card {
+    max-width: 100%;
+  }
+
+  .floating-contact {
+    left: 15px;
+    bottom: 50px;
+    gap: 15px;
+  }
+
+  .floating-contact a {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav {
+    transition: none;
+  }
+}
+
+
+/* === اصلاحات رابط کاربری نسخه منتشرشده === */
+.site-contact-cta {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 18px 20px;
+  background: #fff;
+  border: 1px solid #e2e7ee;
+  border-right: 5px solid #c62828;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.08);
+  text-align: center;
+}
+.site-contact-cta p { margin: 0; }
+.site-contact-cta a { color: #c62828; font-weight: 700; text-decoration: none; }
+
+/* FAQ: کارت قرمز و آکاردئون واقعی */
+.section:has(> .faq-item) {
+  background: #c62828;
+  color: #fff;
+  border-radius: 16px;
+  padding: 22px;
+  margin: 28px auto;
+  box-shadow: 0 5px 18px rgba(120,0,0,.18);
+}
+.section:has(> .faq-item) > h2 { color: #fff; margin-top: 0; }
+.faq-item {
+  background: #fff;
+  color: #222;
+  border-radius: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+  text-align: right;
+  border: 1px solid rgba(255,255,255,.35);
+}
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 16px;
+  border: 0;
+  background: #fff;
+  color: #222;
+  text-align: right;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.faq-question:hover, .faq-item.active .faq-question { background: #fff3f3; color: #b71c1c; }
+.faq-question .icon { transition: transform .2s ease; }
+.faq-item.active .faq-question .icon { transform: rotate(180deg); }
+.faq-answer { display: none; padding: 0 16px 14px; background: #fff; line-height: 1.9; }
+.faq-item.active .faq-answer { display: block; }
+.faq-answer p { margin: 0; }
+
+/* دکمه‌های تماس همیشه روی صفحه و بالاتر از محتوا/فوتر بمانند */
+.floating-contact {
+  position: fixed !important;
+  left: max(14px, env(safe-area-inset-left)) !important;
+  bottom: max(18px, env(safe-area-inset-bottom)) !important;
+  z-index: 2147483000 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+.floating-contact a {
+  width: 50px !important;
+  height: 50px !important;
+  min-width: 50px;
+  min-height: 50px;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 12px rgba(0,0,0,.3);
+}
+
+/* منوی موبایل */
+@media (max-width: 767px) {
+  header { position: relative; z-index: 3001; }
+  nav {
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-height: 0;
+    display: flex;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height .25s ease, visibility .25s ease;
+    z-index: 3000 !important;
+  }
+  nav.open { max-height: 420px; visibility: visible; }
+  .menu-btn { display: inline-flex !important; align-items: center; justify-content: center; min-width: 48px; min-height: 48px; }
+  .section:has(> .faq-item) { margin: 22px 12px; padding: 16px 12px; }
+  .site-contact-cta { margin: 20px 12px; }
+}
