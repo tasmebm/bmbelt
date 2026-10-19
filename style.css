@@ -304,7 +304,7 @@ footer a {
   background: transparent;
   color: #26394d;
   font-family: Vazirmatn, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1.9;
   text-align: right;
@@ -478,7 +478,7 @@ a:focus-visible {
   .faq-question {
     gap: 10px;
     padding: 15px 3px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .faq-arrow {
