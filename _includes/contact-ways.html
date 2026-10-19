@@ -34,8 +34,10 @@
     <!-- واتساپ -->
     <a href="https://wa.me/989122714934"
        class="contact-way whatsapp"
-       target="_blank" rel="noopener noreferrer"
+       target="_blank"
+       rel="noopener noreferrer"
        aria-label="واتساپ بزرگمهر">
+
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path fill="currentColor" stroke="none"
           d="M20.52 3.48A11.87 11.87 0 0 0 12.08 0
@@ -46,6 +48,7 @@
           .99-3.62-.23-.37a9.86 9.86 0 0 1-1.52-5.26
           c0-5.45 4.44-9.89 9.9-9.89a9.83 9.83 0 0 1 7 2.9
           9.83 9.83 0 0 1 2.9 7c0 5.45-4.44 9.89-9.92 9.89z"/>
+
         <path fill="currentColor" stroke="none"
           d="M17.52 14.4c-.3-.15-1.77-.87-2.04-.97
           -.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17
@@ -59,57 +62,71 @@
           .57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42
           -.07-.13-.27-.2-.57-.35z"/>
       </svg>
+
       <span>واتساپ</span>
     </a>
 
     <!-- اینستاگرام -->
     <a href="https://www.instagram.com/tasmebozorgnehr/"
        class="contact-way instagram"
-       target="_blank" rel="noopener noreferrer"
+       target="_blank"
+       rel="noopener noreferrer"
        aria-label="اینستاگرام بزرگمهر">
+
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <rect x="3" y="3" width="18" height="18" rx="5"
           fill="none" stroke="currentColor" stroke-width="2"/>
         <circle cx="12" cy="12" r="4"
           fill="none" stroke="currentColor" stroke-width="2"/>
-        <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+        <circle cx="17.5" cy="6.5" r="1.2"
+          fill="currentColor"/>
       </svg>
+
       <span>اینستاگرام</span>
     </a>
 
   </div>
-<!-- آدرس فروشگاه -->
-<div class="contact-ways-address">
-  <div class="contact-way address-link">
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
-      <circle cx="12" cy="10" r="2.5"/>
-    </svg>
 
-    <span>
-      تهران، خیابان سعدی جنوبی (جدید)، پایین‌تر از اداره پست،
-      پاساژ ایران (۷ غربی)، پلاک ۴۰۱
-    </span>
+  <!-- آدرس فروشگاه -->
+  <div class="contact-ways-address">
+    <div class="contact-way address-link">
+
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+        <circle cx="12" cy="10" r="2.5"/>
+      </svg>
+
+      <span>
+        تهران، خیابان سعدی جنوبی (جدید)، پایین‌تر از اداره پست،
+        پاساژ ایران (۷ غربی)، پلاک ۴۰۱
+      </span>
+
+    </div>
   </div>
-</div>
 
 </section>
+
 <style>
+/* بخش اصلی ارتباطات */
 .contact-ways {
   margin: 28px 0;
-  padding: 22px 16px;
+  padding: 24px 16px;
   border-top: 1px solid #e5e7eb;
   text-align: center;
   font-family: inherit;
+  box-sizing: border-box;
 }
 
+/* عنوان */
 .contact-ways h2 {
-  margin: 0 0 18px;
-  font-size: 19px;
+  margin: 0 0 20px;
+  font-size: 22px;
   font-weight: 700;
+  line-height: 1.9;
   color: #222;
 }
 
+/* ردیف راه‌های ارتباطی */
 .contact-ways-links {
   display: flex;
   flex-wrap: wrap;
@@ -118,27 +135,31 @@
   gap: 10px;
 }
 
+/* دکمه‌های ارتباطی */
 .contact-way {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  min-height: 42px;
-  padding: 9px 13px;
+  gap: 9px;
+  min-height: 46px;
+  padding: 10px 14px;
   border: 1px solid #e2e5e9;
   border-radius: 9px;
   background: #fff;
   color: #333;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 500;
   line-height: 1.9;
-  transition: background .2s, border-color .2s;
+  box-sizing: border-box;
+  transition: background-color .2s, border-color .2s;
 }
 
+/* اندازه آیکون‌ها */
 .contact-way svg {
-  width: 20px;
-  height: 20px;
-  flex: 0 0 20px;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.8;
@@ -146,56 +167,103 @@
   stroke-linejoin: round;
 }
 
+/* آیکون واتساپ */
 .contact-way.whatsapp svg {
   fill: none;
   stroke: none;
 }
 
+/* رنگ اینستاگرام */
 .contact-way.instagram {
   color: #c13584;
 }
 
+/* رنگ واتساپ */
 .contact-way.whatsapp {
   color: #168b50;
 }
 
+/* حالت هاور بدون تغییر اندازه نوشته */
+.contact-way:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* آدرس فروشگاه */
 .contact-ways-address {
-  margin-top: 14px;
+  margin-top: 16px;
 }
 
 .address-link {
   width: 100%;
-  box-sizing: border-box;
+  min-height: 50px;
   justify-content: flex-start;
   text-align: right;
   color: #333;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 2;
+  cursor: default;
 }
 
+/* آیکون آدرس */
 .address-link svg {
-  flex: 0 0 22px;
-  width: 22px;
-  height: 22px;
+  width: 23px;
+  height: 23px;
+  flex: 0 0 23px;
   color: #dc2626;
 }
 
-.contact-way:hover {
-  background: #f8fafc;
-  border-color: #cbd5e1;
-  font-size: 16px;
+/* جلوگیری از تغییر اندازه آدرس هنگام کلیک یا فوکوس */
+.address-link:hover,
+.address-link:active,
+.address-link:focus {
+  font-size: 17px;
 }
 
+/* نمایش در موبایل */
 @media (max-width: 480px) {
+  .contact-ways {
+    padding: 20px 12px;
+  }
+
+  .contact-ways h2 {
+    font-size: 21px;
+    margin-bottom: 16px;
+  }
+
   .contact-ways-links {
     gap: 8px;
   }
 
   .contact-way {
-    padding: 8px 10px;
-    font-size: 13px;
+    min-height: 44px;
+    padding: 9px 11px;
+    gap: 7px;
+    font-size: 15px;
+  }
+
+  .contact-way svg {
+    width: 21px;
+    height: 21px;
+    flex-basis: 21px;
   }
 
   .address-link {
     align-items: flex-start;
- }
+    font-size: 15px;
+    line-height: 2;
+    padding: 10px;
+  }
+
+  .address-link:hover,
+  .address-link:active,
+  .address-link:focus {
+    font-size: 15px;
+  }
+
+  .address-link svg {
+    margin-top: 5px;
+  }
 }
 </style>
