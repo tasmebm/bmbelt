@@ -40,10 +40,27 @@ header {
   z-index: 1001;
 }
 
-.logo img {
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+header .logo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .logo img {
   display: block;
-  height: 50px;
-  width: auto;
+  width: 80px;
+  height: 80px;
+  max-width: 100%;
+  object-fit: contain;
   border-radius: 50%;
 }
 
