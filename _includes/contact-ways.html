@@ -94,3 +94,108 @@
 </div>
 
 </section>
+<style>
+.contact-ways {
+  margin: 28px 0;
+  padding: 22px 16px;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+  font-family: inherit;
+}
+
+.contact-ways h2 {
+  margin: 0 0 18px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #222;
+}
+
+.contact-ways-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contact-way {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 9px 13px;
+  border: 1px solid #e2e5e9;
+  border-radius: 9px;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.9;
+  transition: background .2s, border-color .2s;
+}
+
+.contact-way svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-way.whatsapp svg {
+  fill: none;
+  stroke: none;
+}
+
+.contact-way.instagram {
+  color: #c13584;
+}
+
+.contact-way.whatsapp {
+  color: #168b50;
+}
+
+.contact-ways-address {
+  margin-top: 14px;
+}
+
+.address-link {
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  text-align: right;
+  color: #333;
+}
+
+.address-link svg {
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  color: #dc2626;
+}
+
+.contact-way:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  .contact-ways-links {
+    gap: 8px;
+  }
+
+  .contact-way {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .address-link {
+    align-items: flex-start;
+ }
+}
+</style>
