@@ -512,3 +512,16 @@ a:focus-visible {
     animation: none;
   }
 }
+.faq-section .faq-question {
+  justify-content: center;
+  text-align: center;
+}
+
+.faq-section .faq-question > span:first-child {
+  flex: 1;
+  text-align: center;
+}
+
+.faq-section .faq-arrow {
+  flex-shrink: 0;
+}
