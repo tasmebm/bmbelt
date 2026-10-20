@@ -1,44 +1,57 @@
+/* ========================================
+   Bigmehr - Site Interactions
+   ======================================== */
+
 /* ===== Mobile Menu ===== */
 
-function toggleMenu() {
-  const nav = document.getElementById('nav');
-  const button = document.querySelector('.menu-btn');
+function getMenuElements() {
+  return {
+    nav: document.getElementById('nav'),
+    button: document.querySelector('.menu-btn')
+  };
+}
+
+function closeMenu() {
+  const { nav, button } = getMenuElements();
 
   if (!nav) return;
 
-  const isOpen = nav.classList.toggle('open');
+  nav.classList.remove('open');
 
   if (button) {
-    button.setAttribute('aria-expanded', String(isOpen));
-    button.setAttribute(
-      'aria-label',
-      isOpen ? 'بستن منو' : 'باز کردن منو'
-    );
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('aria-label', 'باز کردن منو');
   }
 }
 
-/* ===== Menu + FAQ Initialization ===== */
+function toggleMenu() {
+  const { nav, button } = getMenuElements();
 
-function initializeSiteInteractions() {
-  // بستن منو با کلیک بیرون از آن
-  document.addEventListener('click', function (event) {
-    const nav = document.getElementById('nav');
-    const button = document.querySelector('.menu-btn');
+  if (!nav) return;
 
-    if (!nav || !button) return;
+  const isOpen = nav.classList.contains('open');
 
-    if (
-      !nav.contains(event.target) &&
-      !button.contains(event.target)
-    ) {
-      nav.classList.remove('open');
-      button.setAttribute('aria-expanded', 'false');
-      button.setAttribute('aria-label', 'باز کردن منو');
-    }
-  });
+  if (isOpen) {
+    closeMenu();
+    return;
+  }
 
-  // عملکرد سوالات متداول
+  nav.classList.add('open');
+
+  if (button) {
+    button.setAttribute('aria-expanded', 'true');
+    button.setAttribute('aria-label', 'بستن منو');
+  }
+}
+
+/* ===== FAQ ===== */
+
+function initializeFAQ() {
   document.querySelectorAll('.faq-section').forEach(function (section) {
+    if (section.dataset.faqInitialized === 'true') return;
+
+    section.dataset.faqInitialized = 'true';
+
     section.addEventListener('click', function (event) {
       const button = event.target.closest('.faq-question');
 
@@ -50,7 +63,7 @@ function initializeSiteInteractions() {
 
       const isOpen = item.classList.contains('active');
 
-      // ابتدا تمام سوالات همین بخش بسته شوند
+      // بستن سایر سوالات همین بخش
       section.querySelectorAll('.faq-item').forEach(function (faq) {
         faq.classList.remove('active');
 
@@ -61,7 +74,7 @@ function initializeSiteInteractions() {
         }
       });
 
-      // اگر سوال بسته بود، آن را باز کن
+      // باز کردن سوال انتخاب‌شده، در صورت بسته بودن
       if (!isOpen) {
         item.classList.add('active');
         button.setAttribute('aria-expanded', 'true');
@@ -70,7 +83,63 @@ function initializeSiteInteractions() {
   });
 }
 
-// اجرا چه قبل از آماده شدن صفحه و چه بعد از آن
+/* ===== Global Event Initialization ===== */
+
+function initializeSiteInteractions() {
+  if (document.documentElement.dataset.siteInteractionsInitialized === 'true') {
+    initializeFAQ();
+    return;
+  }
+
+  document.documentElement.dataset.siteInteractionsInitialized = 'true';
+
+  // بستن منو با کلیک بیرون از منو
+  document.addEventListener('click', function (event) {
+    const { nav, button } = getMenuElements();
+
+    if (!nav || !nav.classList.contains('open')) return;
+
+    if (
+      !nav.contains(event.target) &&
+      (!button || !button.contains(event.target))
+    ) {
+      closeMenu();
+    }
+  });
+
+  // بستن منو با کلید Escape
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Escape') return;
+
+    const { nav, button } = getMenuElements();
+
+    if (nav && nav.classList.contains('open')) {
+      closeMenu();
+
+      if (button) {
+        button.focus();
+      }
+    }
+  });
+
+  // بستن منوی موبایل پس از انتخاب لینک
+  document.addEventListener('click', function (event) {
+    const { nav } = getMenuElements();
+
+    if (!nav || !nav.classList.contains('open')) return;
+
+    const link = event.target.closest('#nav a');
+
+    if (link && nav.contains(link)) {
+      closeMenu();
+    }
+  });
+
+  initializeFAQ();
+}
+
+/* ===== Start ===== */
+
 if (document.readyState === 'loading') {
   document.addEventListener(
     'DOMContentLoaded',
