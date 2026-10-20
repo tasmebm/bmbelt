@@ -53,7 +53,11 @@ function initializeFAQ() {
     section.dataset.faqInitialized = 'true';
 
     section.addEventListener('click', function (event) {
-      const button = event.target.closest('.faq-question');
+      const target = event.target;
+
+if (!(target instanceof Element)) return;
+
+const button = target.closest('.faq-question');
 
       if (!button || !section.contains(button)) return;
 
