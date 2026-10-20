@@ -551,3 +551,156 @@ a:focus-visible {
     animation: none;
   }
 }
+
+/* ===== Contact Ways ===== */
+
+.contact-ways {
+  box-sizing: border-box;
+  margin: 28px 0;
+  padding: 24px 16px;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+  font-family: inherit;
+}
+
+.contact-ways h2 {
+  margin: 0 0 20px;
+  color: #222;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.9;
+}
+
+.contact-ways-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contact-way {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 10px 14px;
+  border: 1px solid #e2e5e9;
+  border-radius: 9px;
+  background: #fff;
+  color: #333;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.9;
+  text-decoration: none;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.contact-way svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-way.phone span {
+  font-size: 19px;
+  font-weight: 600;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.contact-way.whatsapp {
+  color: #168b50;
+}
+
+.contact-way.whatsapp svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+.contact-way.instagram {
+  color: #c13584;
+}
+
+.contact-way:hover {
+  background-color: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.contact-way:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+.contact-ways-address {
+  margin-top: 16px;
+}
+
+.contact-ways .address-link {
+  width: 100%;
+  min-height: 50px;
+  justify-content: flex-start;
+  text-align: right;
+  color: #333;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 2;
+  cursor: default;
+}
+
+.contact-ways .address-link svg {
+  width: 23px;
+  height: 23px;
+  flex: 0 0 23px;
+  color: #dc2626;
+}
+
+@media (max-width: 480px) {
+  .contact-ways {
+    padding: 20px 12px;
+  }
+
+  .contact-ways h2 {
+    margin-bottom: 16px;
+    font-size: 21px;
+  }
+
+  .contact-ways-links {
+    gap: 8px;
+  }
+
+  .contact-way {
+    min-height: 44px;
+    gap: 7px;
+    padding: 9px 11px;
+    font-size: 15px;
+  }
+
+  .contact-way svg {
+    width: 21px;
+    height: 21px;
+    flex-basis: 21px;
+  }
+
+  .contact-way.phone span {
+    font-size: 17px;
+  }
+
+  .contact-ways .address-link {
+    align-items: flex-start;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .contact-ways .address-link svg {
+    margin-top: 5px;
+  }
+}
