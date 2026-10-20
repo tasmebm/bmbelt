@@ -1,13 +1,29 @@
+/* ========================================
+   Bigmehr Industrial Belts
+   Main Stylesheet
+   ======================================== */
+
+/* ===== Vazirmatn Font ===== */
+
 @font-face {
-  font-family: Vazirmatn;
-  src: url('/fonts/Vazirmatn[wght].woff2') format('woff2');
+  font-family: "Vazirmatn";
+  src: url("/fonts/Vazirmatn[wght].woff2") format("woff2");
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
 }
 
-* {
+/* ===== Global ===== */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -16,38 +32,53 @@ body {
   background: #f5f5f5;
   color: #222;
   text-align: center;
-  line-height: 1.7;
+  font-family: "Vazirmatn", sans-serif;
   font-size: 16px;
-  font-family: Vazirmatn, sans-serif;
+  line-height: 1.7;
 }
 
-h1, h2, h3, h4, h5, h6,
-p, a, li, span, div, button {
-  font-family: Vazirmatn, sans-serif;
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* ===== Header ===== */
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #003366;
-  padding: 10px 20px;
-  color: #fff;
   position: relative;
   z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: #003366;
+  color: #fff;
 }
 
 header .logo {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
   visibility: visible;
   opacity: 1;
 }
@@ -62,7 +93,6 @@ header .logo img {
   display: block;
   width: 50px;
   height: 50px;
-  max-width: 100%;
   object-fit: contain;
   border-radius: 50%;
 }
@@ -70,38 +100,39 @@ header .logo img {
 /* ===== Mobile Menu ===== */
 
 .menu-btn {
+  padding: 6px 12px;
+  border: 0;
+  background: transparent;
+  color: #fff;
   font-size: 30px;
   cursor: pointer;
-  background: none;
-  border: none;
-  color: #fff;
-  padding: 6px 12px;
 }
 
 nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
   display: flex;
   flex-direction: column;
-  background: #003366;
-  position: absolute;
-  top: 70px;
-  right: 0;
   width: 100%;
   max-height: 0;
   overflow: hidden;
-  z-index: 1000;
-  transition: max-height .25s ease;
+  background: #003366;
+  transition: max-height 0.25s ease;
 }
 
 nav.open {
   max-height: 480px;
+  overflow-y: auto;
 }
 
 nav a {
   padding: 14px 8px;
-  text-decoration: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   color: #fff;
-  border-top: 1px solid rgba(255, 255, 255, .2);
   font-size: 15px;
+  text-decoration: none;
 }
 
 nav a:hover,
@@ -109,18 +140,18 @@ nav a:focus-visible {
   background: #002244;
 }
 
-/* ===== Sections ===== */
+/* ===== Main Sections ===== */
 
 .section {
-  padding: 16px;
   max-width: 1100px;
   margin: 0 auto 30px;
+  padding: 16px;
 }
 
 .section h1,
 .section h2 {
-  color: #003366;
   margin-bottom: 12px;
+  color: #003366;
 }
 
 /* ===== Hero Image ===== */
@@ -146,24 +177,28 @@ nav a:focus-visible {
 .products {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
-  justify-content: center;
   align-items: stretch;
+  justify-content: center;
+  gap: 18px;
 }
 
 .product-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
-  padding: 18px;
+  flex: 1 1 300px;
   width: 100%;
   max-width: 48%;
+  padding: 18px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   text-align: center;
 }
 
 .product-card img {
+  display: block;
+  width: auto;
   max-width: 100%;
   height: auto;
+  margin: 0 auto;
 }
 
 .products .product-card h3 a {
@@ -174,8 +209,8 @@ nav a:focus-visible {
 
 .image-row {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -189,22 +224,22 @@ nav a:focus-visible {
 /* ===== Map ===== */
 
 iframe {
-  border: 0;
   width: 100%;
   height: 250px;
   margin-top: 15px;
+  border: 0;
 }
 
 /* ===== Footer ===== */
 
 footer {
+  margin-top: 30px;
+  padding: 24px 16px;
   background: #003366;
   color: #fff;
-  padding: 24px 16px;
   font-size: 14px;
   line-height: 1.8;
   text-align: center;
-  margin-top: 30px;
 }
 
 footer a {
@@ -216,24 +251,24 @@ footer a {
 .floating-contact {
   position: fixed;
   z-index: 2000;
-  left: 16px;
   bottom: 18px;
+  left: 16px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 .floating-contact a {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   color: #fff;
-  text-decoration: none;
   font-size: 23px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, .25);
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 }
 
 .floating-contact a svg {
@@ -253,34 +288,34 @@ footer a {
   background: #c13584;
 }
 
-/* ===== FAQ Card - Bigmehr ===== */
+/* ===== FAQ Section ===== */
 
 .faq-section {
-  direction: rtl;
-  text-align: right;
   max-width: 960px;
   margin: 35px auto;
   padding: 28px;
-  background: #fff;
   border: 1px solid #e4eaf1;
   border-radius: 18px;
-  box-shadow: 0 8px 28px rgba(0, 51, 102, .08);
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(0, 51, 102, 0.08);
+  direction: rtl;
+  text-align: right;
 }
 
 .faq-section > h2 {
+  margin: 0 0 8px;
   color: #003366;
   font-size: 25px;
   font-weight: 700;
   text-align: center;
-  margin: 0 0 8px;
 }
 
 .faq-intro {
+  margin: 0 0 24px;
   color: #687789;
   font-size: 14px;
-  text-align: center;
   line-height: 2;
-  margin: 0 0 24px;
+  text-align: center;
 }
 
 .faq-container {
@@ -294,27 +329,32 @@ footer a {
 .faq-question {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 14px;
   width: 100%;
-  padding: 17px 8px;
   margin: 0;
+  padding: 17px 8px;
   border: 0;
   border-radius: 8px;
   background: transparent;
   color: #26394d;
-  font-family: Vazirmatn, sans-serif;
+  font-family: inherit;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.9;
-  text-align: right;
+  text-align: center;
   cursor: pointer;
-  transition: color .25s ease, background .25s ease;
+  transition: color 0.25s ease, background 0.25s ease;
+}
+
+.faq-question > span:first-child {
+  flex: 1;
+  text-align: center;
 }
 
 .faq-question:hover {
-  color: #0757a6;
   background: #f7faff;
+  color: #0757a6;
 }
 
 .faq-item.active .faq-question {
@@ -323,37 +363,35 @@ footer a {
 
 .faq-arrow {
   display: flex;
+  flex: 0 0 34px;
   align-items: center;
   justify-content: center;
-  flex: 0 0 34px;
   width: 34px;
   height: 34px;
   border-radius: 50%;
   background: #edf4fb;
   color: #0757a6;
-  transition: background .25s ease, color .25s ease;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 .faq-arrow svg {
   display: block;
+  flex: 0 0 auto;
   width: 20px;
   height: 20px;
-  flex: 0 0 auto;
-  transition: transform .3s ease;
+  transition: transform 0.3s ease;
 }
 
 .faq-item.active .faq-arrow {
-  color: #fff;
   background: #003366;
+  color: #fff;
 }
-
-/* Rotate the inline SVG arrow */
 
 .faq-item.active .faq-arrow svg {
   transform: rotate(180deg);
 }
 
-/* FAQ answers */
+/* FAQ Answers */
 
 .faq-answer {
   display: none;
@@ -366,7 +404,7 @@ footer a {
 
 .faq-item.active .faq-answer {
   display: block;
-  animation: faq-open .25s ease;
+  animation: faq-open 0.25s ease;
 }
 
 .faq-answer p {
@@ -383,12 +421,19 @@ footer a {
   text-decoration: underline;
 }
 
-.faq-question:focus-visible {
+/* ===== Accessibility ===== */
+
+button:focus-visible,
+a:focus-visible {
   outline: 2px solid #ffbf47;
+  outline-offset: 3px;
+}
+
+.faq-question:focus-visible {
   outline-offset: 2px;
 }
 
-/* FAQ animation */
+/* ===== FAQ Animation ===== */
 
 @keyframes faq-open {
   from {
@@ -402,30 +447,9 @@ footer a {
   }
 }
 
-/* ===== Accessibility ===== */
-
-button:focus-visible,
-a:focus-visible {
-  outline: 2px solid #ffbf47;
-  outline-offset: 3px;
-}
-
 /* ===== Desktop ===== */
 
 @media (min-width: 768px) {
-  nav {
-    position: static;
-    max-height: none;
-    width: auto;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  nav a {
-    border: 0;
-    padding: 12px 20px;
-  }
-
   header {
     justify-content: center;
     gap: 30px;
@@ -433,6 +457,20 @@ a:focus-visible {
 
   .menu-btn {
     display: none;
+  }
+
+  nav {
+    position: static;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  nav a {
+    padding: 12px 20px;
+    border: 0;
   }
 }
 
@@ -444,12 +482,13 @@ a:focus-visible {
   }
 
   .product-card {
+    flex-basis: 100%;
     max-width: 100%;
   }
 
   .floating-contact {
-    left: 15px;
     bottom: 50px;
+    left: 15px;
     gap: 15px;
   }
 
@@ -471,8 +510,8 @@ a:focus-visible {
   }
 
   .faq-intro {
-    font-size: 13px;
     margin-bottom: 18px;
+    font-size: 13px;
   }
 
   .faq-question {
@@ -511,17 +550,4 @@ a:focus-visible {
   .faq-item.active .faq-answer {
     animation: none;
   }
-}
-.faq-section .faq-question {
-  justify-content: center;
-  text-align: center;
-}
-
-.faq-section .faq-question > span:first-child {
-  flex: 1;
-  text-align: center;
-}
-
-.faq-section .faq-arrow {
-  flex-shrink: 0;
 }
