@@ -1,0 +1,15 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ include.headline | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "datePublished": {{ include.date | jsonify }},
+  "dateModified": {{ include.date | jsonify }},
+  "inLanguage": "fa-IR",
+  "mainEntityOfPage": {{ page.url | absolute_url | jsonify }},
+  "image": "https://bmbelt.ir/images/og-image.jpg",
+  "author": {"@type": "Organization", "name": "تسمه صنعتی بزرگمهر"},
+  "publisher": {"@type": "Organization", "name": "تسمه صنعتی بزرگمهر", "logo": {"@type": "ImageObject", "url": "https://bmbelt.ir/images/logo.webp"} }
+}
+</script>

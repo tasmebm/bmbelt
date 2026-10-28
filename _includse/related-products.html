@@ -1,0 +1,9 @@
+{% assign rp_items = "/products/timing-belt.html|تسمه تایمینگ,/products/v-belt.html|تسمه شیاری Poly-V,/products/vbelt.html|تسمه پروانه V-Belt,/products/conveyor-pvc.html|تسمه نقاله PVC و PU,/products/power-belt.html|تسمه انتقال نیرو,/products/weld-belt.html|تسمه جوشی گرد و چندضلعی" | split: "," %}
+<nav class="related-products" aria-label="سایر محصولات">
+  <h2>سایر انواع تسمه صنعتی</h2>
+  <ul>
+    {% for item in rp_items %}{% assign rp_parts = item | split: "|" %}{% unless rp_parts[0] == page.url %}
+    <li><a href="{{ rp_parts[0] | relative_url }}">{{ rp_parts[1] }}</a></li>
+    {% endunless %}{% endfor %}
+  </ul>
+</nav>
