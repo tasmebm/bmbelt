@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include header.html %}
+
+  <main id="main-content">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script src="{{ '/script.js' | relative_url }}" defer></script>
+</body>
+</html>
+
