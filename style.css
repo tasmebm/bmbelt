@@ -4,17 +4,6 @@
    ======================================== */
 
 
-/* ===== Vazirmatn Font ===== */
-
-@font-face {
-  font-family: "Vazirmatn";
-  src: url("/fonts/Vazirmatn-VF.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-}
-
-
 /* ===== Global ===== */
 
 *,
@@ -34,7 +23,7 @@ body {
   background: #f5f5f5;
   color: #222;
   text-align: center;
-  font-family: "Vazirmatn", sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Tahoma, "Noto Sans Arabic", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.7;
 }
